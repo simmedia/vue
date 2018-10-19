@@ -1,0 +1,78 @@
+$boja: #303952;
+$fontColor: #fff;
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: $boja;
+    text-align: center;
+    font-family: sans-serif;
+    
+}
+
+#app {
+    width: 100%;
+    margin-top: 70px;
+
+    h2 {
+        color: $fontColor;
+        font-size: 25px;
+        margin: 5px 0;
+    }
+
+    p {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 10px;
+        
+    }
+}
+
+img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+// social buttons
+
+.social a i {
+    font-size: 30px;
+    margin: 5px;
+    transition: 0.3s;
+
+    &:hover {
+        color: #fff !important;
+    }
+}
+
+button {
+    padding: 5px 20px;
+    margin-top: 50px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    letter-spacing: 0.2mm;
+    color: $boja;
+    font-weight: bold;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.288);
+    }
+}
+
+.backBtn {
+    margin: auto;
+    height: 40px;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }

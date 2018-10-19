@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My VueJS Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <transition name="fade">
+                <button class="backBtn" v-show="!intro" @click="intro = !intro">go back</button>
+        </transition>
+
+        <transition name="fade">
+                <h1 style="margin-top: 60px; color: #fff" class="backBtn" v-show="!intro">{{ siteStatus }}</h1>
+        </transition>
+           
+        <transition name="fade">
+
+                <div v-show="intro" class="intro">
+                        <img src="myAvatar(1).png" alt="">
+                        <h2>{{ name }}</h2>
+                        <p>{{ title }}</p>
+                        <div class="social">
+                           <a href="http://instagram.com/lovue.codes" target="_blank"><i style="color: #fb3958" class="fab fa-instagram"></i></a>
+                           <a href="http://facebook.com/simce92" target="_blank"><i style="color: #3b5998" class="fab fa-facebook-square"></i></a>
+                           <a href="http://linkedin.com/in/simadurlan92" target="_blank"><i style="color: #006491;" class="fab fa-linkedin"></i></a>
+                        </div>
+                        <button v-on:click="intro = !intro">ENTER</button>
+                    </div>
+        </transition>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
